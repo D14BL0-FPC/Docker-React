@@ -1,0 +1,170 @@
+/* CONTENEDOR DEL HEADER */
+.header-container {
+  background-color: #2c3037;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid #1f2126;
+}
+
+/* LOGO */
+.header-logo img {
+  height: 55px;
+  cursor: pointer;
+}
+
+/* BOTONES DEL HEADER (INICIO, DIRECTORIO ANIME, LOGIN) */
+.header-menu-group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-left: auto;
+}
+
+/* MENÚ HAMBURGUESA */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 18px;
+  z-index: 101;
+}
+
+.hamburger-menu div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* TEXTO "MENU" AL LADO DE LA HAMBURGUESA */
+.hamburger-menu-text {
+  display: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 10px;
+  position: absolute;
+  right: 68px;
+  top: 28px;
+}
+
+/* MENU LATERAL */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #2c3037;
+  padding: 50px 20px 0 20px;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* LINKS NORMALES */
+.sidebar a {
+  color: #c9ced6;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.sidebar a:hover {
+  color: #4dc8ff;
+}
+
+/* BUSCADOR EN EL MENU LATERAL */
+.sidebar .header-search {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  max-width: 230px;
+  width: 100%;
+}
+
+.sidebar .header-search .form-control {
+  background-color: #1f2126;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.sidebar .search-btn {
+  background-color: #1f2126;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  color: white;
+}
+
+/* LOGIN COMO CAJA */
+.sidebar .login-box {
+  background-color: #1f2126;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  display: block;
+}
+
+/* BOTONES HEADER (DESKTOP) */
+.header-btn, 
+.header-login {
+  color: #c9ced6 !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+  border: none !important;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+}
+
+.header-login {
+  background-color: #1f2126;
+  color: white;
+  border-radius: 12px;
+  padding: 8px 20px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.header-btn:hover, 
+.header-login:hover {
+  color: #4dc8ff;
+}
+
+/* MEDIA QUERY PARA MOVIL */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .header-menu-group {
+    display: none;
+  }
+
+  .hamburger-menu-text {
+    display: inline;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar .header-search {
+    width: 100%;
+  }
+}
