@@ -7,7 +7,7 @@ load_entrypoint_nginx(){
 }
 
 workdir(){
-    cd /root/admin/node/proyectos/docker-react
+    cd /root/admin/node/proyectos/proyecto-principal
 }
 
 dependencias(){
