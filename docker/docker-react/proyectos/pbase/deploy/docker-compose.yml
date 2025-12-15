@@ -2,9 +2,9 @@ services:
   web:
     build:
       context: ${CONTEXTO}
-      dockerfile: ./dockerfiles/base/ubbase 
+      dockerfile: ./dockerfiles/ubbase/ubbase 
     container_name: ${CONTAINER_NAME}
-    image: jiahaolin69/ubbase
+    image: francisco/ubbase
     ports:
       - ${PORT_SSH}:80
     env_file:
@@ -12,10 +12,10 @@ services:
     volumes:
       - ./logs:/root/logs 
     networks:
-      netmegacrossover:
+      netbase:
         ipv4_address: ${IP_WEB}
 networks:
-  netmegacrossover:
+  netbase:
     driver: bridge
     ipam:
       driver: default
