@@ -4,7 +4,7 @@ config_nginx() {
 }
 
 load_entrypoint_base(){
-    bash /root/admin/base/start.sh
+    bash /root/admin/ubbase/start.sh
 }
 
 certificados_ssl(){
