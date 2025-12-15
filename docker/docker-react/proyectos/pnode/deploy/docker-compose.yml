@@ -2,7 +2,7 @@ services:
   web:
     build:
       context: ${CONTEXTO}
-      dockerfile: ./dockerfiles/node/node
+      dockerfile: ./dockerfiles/node/nodebase
     container_name: ${NOMBRE}
     ports:
       - "6969:80"   
