@@ -13,7 +13,7 @@ RUN mkdir -p /root/admin/base
 WORKDIR /root/admin/base
 COPY  ./dockerfiles/base/admin/ .
 COPY ./common/id_rsa.pub /root/admin/base/common/id_rsa.pub
-COPY ./dockerfiles/base/admin/start.sh .
+COPY ./dockerfiles/ubbase/admin/start.sh .
 RUN chmod +x ./start.sh
 
 ENTRYPOINT [ "./start.sh" ]
