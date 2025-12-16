@@ -11,13 +11,3 @@ services:
     image: francisco/nginx
     volumes:
       - ./logs:/root/logs      
-    networks:
-      netmegacrossovernginx:
-        ipv4_address: ${IP}
-networks:
-  netmegacrossovernginx:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: ${SUBNET}
