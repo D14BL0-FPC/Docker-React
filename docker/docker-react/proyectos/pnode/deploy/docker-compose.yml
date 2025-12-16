@@ -11,4 +11,13 @@ services:
     image: francisco/nodejs
     volumes:
       - ./logs:/root/logs      
-  
+    networks:
+      netwebbasicanode:
+        ipv4_address: ${IP_WEB}
+networks:
+  netwebbasicanode:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
