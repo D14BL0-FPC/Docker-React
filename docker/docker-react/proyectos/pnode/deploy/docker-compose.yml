@@ -5,17 +5,17 @@ services:
       dockerfile: ./dockerfiles/node/nodebase
     container_name: ${NOMBRE}
     ports:
-      - "6969:80"   
+      - "80:80"  
     env_file:
       - ./.env
     image: francisco/nodejs
     volumes:
       - ./logs:/root/logs      
     networks:
-      netwebbasicanode:
-        ipv4_address: ${IP_WEB}
+      netmegacrossovernode:
+        ipv4_address: ${IP}
 networks:
-  netwebbasicanode:
+  netmegacrossovernode:
     driver: bridge
     ipam:
       driver: default
