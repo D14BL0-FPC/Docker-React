@@ -5,20 +5,10 @@ services:
       dockerfile: ./dockerfiles/node/nodebase
     container_name: ${NOMBRE}
     ports:
-      - "3000:80"   
+      - "6969:80"   
     env_file:
       - ./.env
     image: francisco/nodejs
     volumes:
       - ./logs:/root/logs      
-    networks:
-      netmegacrossovernode:
-        ipv4_address: ${IP}
-networks:
-  netmegacrossovernode:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: ${SUBNET}
   
