@@ -11,13 +11,4 @@ services:
     image: francisco/nodejs
     volumes:
       - ./logs:/root/logs      
-    networks:
-      netmegacrossovernode:
-        ipv4_address: ${IP}
-networks:
-  netmegacrossovernode:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: ${SUBNET}
+  
