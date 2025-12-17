@@ -12,10 +12,10 @@ services:
     volumes:
       - ./logs:/root/logs      
     networks:
-      netmegacrossovernode:
+      practica:
         ipv4_address: ${IP}
 networks:
-  netmegacrossovernode:
+  practica:
     driver: bridge
     ipam:
       driver: default
